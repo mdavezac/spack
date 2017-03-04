@@ -131,8 +131,8 @@ class FoamExtend(Package):
 
             'CMAKE_DIR': self.spec['cmake'].prefix,
             'CMAKE_BIN_DIR': self.spec['cmake'].prefix.bin,
-            'PYTHON_DIR': self.spec['python'].prefix,
-            'PYTHON_BIN_DIR': self.spec['python'].prefix.bin,
+            'PYTHON_DIR': self.spec['python'].home,
+            'PYTHON_BIN_DIR': self.spec['python'].home.bin),
 
             'FLEX_SYSTEM': 1,
             'FLEX_DIR': self.spec['flex'].prefix,

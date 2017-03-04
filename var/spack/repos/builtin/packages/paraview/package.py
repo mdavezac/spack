@@ -86,8 +86,8 @@ class Paraview(Package):
                                 feature_to_bool('+python'))
             if '+python' in spec:
                 feature_args.append(
-                    '-DPYTHON_EXECUTABLE:FILEPATH=%s/bin/python'
-                    % spec['python'].prefix)
+                    '-DPYTHON_EXECUTABLE:FILEPATH=%s' % (
+                        spec['python'].executable))
             feature_args.append('-DPARAVIEW_USE_MPI:BOOL=%s' %
                                 feature_to_bool('+mpi'))
             if '+mpi' in spec:
