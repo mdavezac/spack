@@ -119,9 +119,9 @@ class Python(AutotoolsPackage):
                       'user configurations are present.').format(self.version))
 
         # Need this to allow python build to find the Python installation.
-        spack_env['PYTHONHOME'] = prefix
-        spack_env['PYTHONPATH'] = prefix
-        spack_env['MACOSX_DEPLOYMENT_TARGET'] = '10.6'
+        spack_env.set('PYTHONHOME', prefix)
+        spack_env.set('PYTHONPATH', prefix)
+        spack_env.set('MACOSX_DEPLOYMENT_TARGET', '10.6')
 
     def configure_args(self):
         spec = self.spec
